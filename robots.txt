@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:/gen/
+
+Sitemap: http://dhblog.org/sitemap_baidu1.xml
+Sitemap: http://dhblog.org/sitemap1.xml
