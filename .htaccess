@@ -1,4 +1,4 @@
-DirectoryIndex index.html index.htm index.php
+DirectoryIndex index.html
 
 ErrorDocument 404 /404.html
 
@@ -23,7 +23,7 @@ order allow,deny
 allow from all
 #deny from all
 #allow from 192.168.0.0/24
-# this would do the same thing..
+#this would do the same thing..
 #allow from 192.168.0
 
 #从旧的文件重定向到新
