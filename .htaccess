@@ -67,10 +67,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.movie002.com$ [NC]
 RewriteRule ^(.*)$ http://db.movie002.com/$1 [L,R=301]
 
-#防止.svn被访问
-RewriteBase /
-RewriteRule ^.svn/.*  ./404.html
-
 #发现服务器启用了TRACE Method
 RewriteCond %{REQUEST_METHOD} ^TRACE
 RewriteRule .* - [F]
@@ -81,3 +77,7 @@ RewriteRule .* - [F]
 ##防止别人的域名解析到你的IP
 #RewriteCond %{HTTP_HOST} !(^movie002.com$) [NC]
 #RewriteRule ^(.*)$ http://www.movie002.com/$1 [R=301,L]
+
+#防止.svn被访问
+RewriteBase /
+RewriteRule ^.svn/.*  ./404.html
