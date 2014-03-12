@@ -58,14 +58,14 @@ RewriteEngine On
 #RewriteCond %{HTTP_HOST} ^www.movie002.com$ [NC]
 #RewriteRule ^(.*)$ http://movie002.com/$1 [L,R=301]
 
-#RewriteCond %{HTTP_HOST} ^movie002.com$ [NC]
-#RewriteRule ^html/(.*)$ http://db.movie002.com/html/$1 [L,R=301]
-
-#RewriteCond %{HTTP_HOST} ^movie002.com$ [NC]
-#RewriteRule ^index/(.*)$ http://db.movie002.com/html/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www.movie002.com$ [NC]
+RewriteRule ^html/(.*)$ http://db.movie002.com/html/$1 [L,R=301]
 
 RewriteCond %{HTTP_HOST} ^www.movie002.com$ [NC]
-RewriteRule ^(.*)$ http://db.movie002.com/$1 [L,R=301]
+RewriteRule ^index/(.*)$ http://db.movie002.com/index/$1 [L,R=301]
+
+#RewriteCond %{HTTP_HOST} ^www.movie002.com$ [NC]
+#RewriteRule ^(.*)$ http://db.movie002.com/$1 [L,R=301]
 
 #发现服务器启用了TRACE Method
 RewriteCond %{REQUEST_METHOD} ^TRACE
